@@ -536,7 +536,7 @@
       color: var(--text-mid);
     }
 
-    input, select, textarea {
+    input:not([type="checkbox"]), select, textarea {
       font-family: var(--sans);
       font-size: 0.95rem;
       font-weight: 300;
@@ -572,14 +572,12 @@
     }
 
     .form-checkbox input[type="checkbox"] {
-      width: 18px !important;
-      height: 18px !important;
-      min-width: 18px;
+      width: 18px;
+      height: 18px;
       flex-shrink: 0;
       accent-color: var(--amber);
-      margin-top: 0.15rem;
-      padding: 0 !important;
-      cursor: pointer;
+      margin-top: 0.2rem;
+      padding: 0;
     }
 
     .form-checkbox label {
@@ -974,7 +972,7 @@
           </div>
 
           <div class="form-checkbox">
-            <input type="checkbox" id="dsgvo" name="dsgvo" />
+            <input type="checkbox" id="dsgvo" name="dsgvo" required />
             <label for="dsgvo">
               Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert und verwendet werden. 
               Die Daten werden vertraulich behandelt und nicht an Dritte weitergegeben. *
